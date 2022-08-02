@@ -1,0 +1,97 @@
+:root {
+  --sidebar-width: 196px;
+  --toolbar-height: -26px;
+  --urlbar-icon-padding: 5px !important;
+  --toolbarbutton-border-radius: 0 !important;
+}
+
+/*.browser-toolbar {
+  background-color: -moz-Field !important;
+}*/
+
+toolbar#nav-bar {
+  margin-left: var(--sidebar-width);
+  background-image: none !important;
+  z-index: 10;
+}
+
+toolbaritem#urlbar-container, toolbaritem#search-container {
+  margin-inline: 0 !important;
+  -moz-box-align: start !important;
+  padding: 0 0 !important;
+}
+
+#searchbar {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+#urlbar, .searchbar-textbox {
+  min-height: 26px !important;
+  margin: 0 !important;
+  border: none !important;
+  border-left: 1px solid ThreeDShadow !important;
+  border-radius: 0 !important;
+}
+
+.searchbar-textbox {
+  margin-top: -1px !important;
+  margin-bottom: -1px !important;
+  border-left: 0 !important;
+}
+
+#PanelUI-button, #nav-bar-overflow-button {
+ max-height: 26px;
+}
+
+/* fix bookmarks toolbar */
+#main-window #PersonalToolbar {
+  background-image: none !important;
+  z-index: 1 !important;
+  position: relative !important;
+  margin-left: 0 !important;
+  margin-top: var(--toolbar-height) !important;
+  padding: 0 !important;
+  min-height: var(--toolbar-height) !important;
+}
+
+toolbarbutton.bookmark-item {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  padding: 5px 6px !important;
+}
+
+/* lock sidebar to height by doing the inverse margin of the toolbar element */
+#sidebar-box {
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+/* lock sidebar to specified width */
+#sidebar-box, #sidebar-box #sidebar {
+    min-width: var(--sidebar-width) !important;
+    max-width: var(--sidebar-width) !important;
+}
+
+/* cosmetic changes only */
+
+#back-button { visibility: collapse; }
+#forward-button { visibility: collapse; }
+#TabsToolbar { visibility: collapse; }
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+/* Sidebery */
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+  display: none;
+}
+#sidebar-box[sidebarcommand="verticaltabsreloaded_go-dev_de-sidebar-action"] > #sidebar-header {
+  visibility: collapse;
+}
+
+.sidebar-splitter {
+  width: 0 !important;
+  border: none !important;
+  border-right: 1px solid ThreeDShadow !important;
+  cursor: default !important
+}
